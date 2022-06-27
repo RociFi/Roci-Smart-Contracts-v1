@@ -1,0 +1,113 @@
+const USDC_ADDRESS = "0x2791bca1f2de4661ed88a30c99a7a9449aa84174";
+const WETH_ADDRESS = "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619";
+const RICH_USDC = "0xf977814e90da44bfa03b6295a0616a897441acec";
+const RICH_WETH = "0x72a53cdbbcc1b9efa39c834a540550e23463aacb";
+
+const ROCI_ADDRESS = "0x42446E8d0873dCb7c5DDf649DBEEa6538b8F9f05"; //Changed to owner with fixes in ROCI-563-2
+
+//----------------------------------CONFIGURATIONS---------------------------------------------
+
+//Score sequence 1...10
+const LTV = [205.0, 195.0, 185.0, 145.0, 135.0, 125.0, 115.0, 85.5, 80.0, 75.0];
+
+const LT = [225.0, 215.0, 205.0, 165.0, 155.0, 145.0, 135.0, 92.0, 90.0, 85.0];
+
+//AddressBook parameters
+const LOAN_DURATION = 2592000;
+
+const SCORE_VALIDITY_PERIOD = 900;
+
+const MIN_SCORE = 0;
+
+const MAX_SCORE = 11;
+
+const NOT_GENERATED = 0;
+
+const GENERATION_ERROR = 1000;
+
+const PENALTY_APY_MULTIPLIER = 2;
+
+const GRACE_PERIOD = "432000";
+
+const MAXIMUM_DAILY_LIMIT = "1000000000000000000000000";
+
+const MAXIMUM_GLOBAL_LIMIT = "1000000000000000000000000";
+
+const MAXIMUM_USER_DAILY_LIMIT = "1000000000000000000000000";
+
+const MAXIMUM_USER_GLOBAL_LIMIT = "1000000000000000000000000";
+
+const ONE_HUNDRED_PERCENT_WEI = "100000000000000000000";
+
+//Data feeds
+const WETH_USDC_PF = "0xF9680D99D6C9589e2a93a78A04A279e509205945"; //Actually it's eth/usd
+
+const USDC_USD_PF = "0xfE4A8cc5b5B2366C1B58Bea3858e81843581b2F7";
+
+// Must match with roles in contracts/Globals.sol
+const ROLE_TOKEN = 0;
+const ROLE_BONDS = 1;
+const ROLE_PAYMENT_CONTRACT = 2;
+const ROLE_REV_MANAGER = 3;
+const ROLE_NFCS = 4;
+const ROLE_COLLATERAL_MANAGER = 5;
+const ROLE_PRICE_FEED = 6;
+const ROLE_ORACLE = 7;
+const ROLE_ADMIN = 8;
+const ROLE_PAUSER = 9;
+const ROLE_LIQUIDATOR = 10;
+const ROLE_COLLECTOR = 11;
+
+//----------------------------------CONFIGURATIONS---------------------------------------------
+
+//Deploy configs
+const gasModes = {
+  low: "safeLow",
+  standard: "standatd",
+  fast: "fast",
+};
+
+const GAS_STATION_URL = "https://gasstation-mainnet.matic.network/v2";
+const DEPLOY_GAS_MODE = gasModes.fast;
+
+const CS_API_URL = "https://testnet-signed-scores.roci.fi/score/1";
+
+module.exports = {
+  USDC_ADDRESS,
+  WETH_ADDRESS,
+  RICH_USDC,
+  RICH_WETH,
+  ROCI_ADDRESS,
+  MAXIMUM_DAILY_LIMIT,
+  MAXIMUM_GLOBAL_LIMIT,
+  MAXIMUM_USER_DAILY_LIMIT,
+  MAXIMUM_USER_GLOBAL_LIMIT,
+  WETH_USDC_PF,
+  USDC_USD_PF,
+  LTV,
+  LT,
+  DEPLOY_GAS_MODE,
+  GAS_STATION_URL,
+  CS_API_URL,
+  LOAN_DURATION,
+  SCORE_VALIDITY_PERIOD,
+  MIN_SCORE,
+  MAX_SCORE,
+  NOT_GENERATED,
+  GENERATION_ERROR,
+  PENALTY_APY_MULTIPLIER,
+  GRACE_PERIOD,
+  ONE_HUNDRED_PERCENT_WEI,
+  ROLE_TOKEN,
+  ROLE_BONDS,
+  ROLE_PAYMENT_CONTRACT,
+  ROLE_REV_MANAGER,
+  ROLE_NFCS,
+  ROLE_COLLATERAL_MANAGER,
+  ROLE_PRICE_FEED,
+  ROLE_ORACLE,
+  ROLE_ADMIN,
+  ROLE_PAUSER,
+  ROLE_LIQUIDATOR,
+  ROLE_COLLECTOR,
+};

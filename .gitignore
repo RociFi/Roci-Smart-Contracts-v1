@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+.openzeppelin
+artifacts
+cache
+docs
+.~lock
+package-lock.json
+contracts_abi
+deployments/temp/*
